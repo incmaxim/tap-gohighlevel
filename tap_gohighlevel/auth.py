@@ -38,6 +38,7 @@ class GoHighLevelAuthenticator(OAuthAuthenticator, metaclass=SingletonMeta):
             "grant_type": "refresh_token",
             "refresh_token": self.refresh_token,
             "user_type": "Location",
+            "redirect_uri": self.config["redirect_uri"],
         }
 
     @classmethod
