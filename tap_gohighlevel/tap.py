@@ -42,6 +42,13 @@ class TapGoHighLevel(Tap):
             description="The Location Id to request data",
             examples=["ve9EPM428h8vShlRW1KT"],
         ),
+        th.Property(
+            "redirect_uri",
+            th.StringType,
+            required=False,
+            default='https://bratrax.com/oauth/ghl/callback',
+            description="GHL app redirect URI",
+        ),
     ).to_dict()
 
     def __init__(self, *args, **kwargs):
